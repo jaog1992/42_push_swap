@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 #include "../libraries/libft/include/libft.h"
 
 int	ft_push(t_stack *stack, int set, int operation)
@@ -29,7 +28,6 @@ void	ft_pa(t_stack *stack, int i)
 	if (stack->size_b)
 	{
 		stack->a = ft_rearray(stack->a, stack->size_a, stack->size_a + 1);
-		printf("puntero al stack 'a' %p\n",(void*)&stack->a);
 		stack->size_a++;
 		i = stack->size_a - 1;
 		while (i > 0)
@@ -45,7 +43,6 @@ void	ft_pa(t_stack *stack, int i)
 			i++;
 		}
 		stack->b = ft_rearray(stack->b, stack->size_b, stack->size_b - 1);
-		printf("puntero al stack 'b' %p\n",(void*)&stack->b);
 		stack->size_b--;
 		ft_printf("pa\n");
 	}
@@ -57,7 +54,6 @@ void	ft_pb(t_stack *stack, int i)
 	if (stack->size_a)
 	{
 		stack->b = ft_rearray(stack->b, stack->size_b, stack->size_b + 1);
-		printf("puntero al stack 'b' %p\n",(void*)&stack->b);
 		stack->size_b++;
 		i = stack->size_b - 1;
 		while (i > 0)
@@ -73,7 +69,6 @@ void	ft_pb(t_stack *stack, int i)
 			i++;
 		}
 		stack->a = ft_rearray(stack->a, stack->size_a, stack->size_a - 1);
-		printf("puntero al stack 'a' %p\n",(void*)&stack->a);
 		stack->size_a--;
 		ft_printf("pb\n");
 	}

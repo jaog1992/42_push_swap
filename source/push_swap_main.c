@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 #include "../libraries/libft/include/libft.h"
 
 t_stack	*inicializar_stack(void)
@@ -24,7 +23,6 @@ t_stack	*inicializar_stack(void)
 		ft_print_error("Memory allocation for Stack data type failed\n");
 		return (stack);
 	}
-	printf("puntero a la estructura 'stack' %p\n",(void*)&stack);
 	stack->error = 0;
 	stack->a = NULL;
 	stack->b = NULL;
@@ -56,11 +54,9 @@ void	stack_fill(t_stack *stack, int argc, char **argv)
 int	stack_ini(t_stack *stack, int argc, char **argv)
 {
 	int			size;
-	int			i;
 
 	if (argc == 1)
 		return (write(2, "Error\n", 6));
-	i = 1;
 	if (argc == 2)
 		size = ft_double_strlen(ft_split(argv[1], ' '), 1) + 1;
 	else
@@ -68,7 +64,6 @@ int	stack_ini(t_stack *stack, int argc, char **argv)
 	stack->a = malloc((size) * sizeof(int));
 	if (!stack->a)
 		return (EXIT_FAILURE);
-	printf("puntero al stack 'a' %p\n",(void*)&stack->a);
 	stack->size_a = size - 1;
 	stack_fill(stack, argc, argv);
 	if (stack->error > 0)
