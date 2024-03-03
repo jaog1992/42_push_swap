@@ -12,7 +12,7 @@
 
 #include "../../include/libft.h"
 
-size_t	ft_double_strlen(char **argv, int f)
+size_t	ft_double_strlen(char **argv)
 {
 	size_t	i;
 
@@ -24,7 +24,5 @@ size_t	ft_double_strlen(char **argv, int f)
 		argv++;
 		i++;
 	}
-	if (f == 1)
-		ft_free_substrings(argv);
 	return (i);
 }

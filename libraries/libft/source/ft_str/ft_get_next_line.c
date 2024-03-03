@@ -155,33 +155,3 @@ char	*ft_get_next_line(int fd)
 	prev_line = ft_save_prev_line(prev_line);
 	return (next_line);
 }
-
-//int	main(int argc, char **argv)
-//{
-//	int		fd;
-//	char	*line;
-
-//	if (argc == 2)
-//	{
-//		fd = open(argv[1], O_RDONLY);
-//		if (fd == -1)
-//		{
-//			perror("Error while OPENING the text file");
-//			return (1);
-//		}
-//		while (get_next_line(fd))
-//		{
-//			line = get_next_line(fd);
-//			printf("%s\n", line);
-//		}
-//		free(line);
-//		if (close(fd) == -1)
-//		{
-//			perror("Error while CLOSING the text file");
-//			return (1);
-//		}
-//	}
-//	else
-//		printf("Set only 2 arguments: %s + filename\n", argv[0]);
-//	return (0);
-//}

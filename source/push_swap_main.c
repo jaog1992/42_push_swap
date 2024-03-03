@@ -58,9 +58,9 @@ int	stack_ini(t_stack *stack, int argc, char **argv)
 	if (argc == 1)
 		return (write(2, "Error\n", 6));
 	if (argc == 2)
-		size = ft_double_strlen(ft_split(argv[1], ' '), 1) + 1;
+		size = ft_double_strlen(ft_split(argv[1], ' ')) + 1;
 	else
-		size = ft_double_strlen(argv, 0);
+		size = ft_double_strlen(argv);
 	stack->a = malloc((size) * sizeof(int));
 	if (!stack->a)
 		return (EXIT_FAILURE);

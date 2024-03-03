@@ -35,7 +35,8 @@ int	*ft_rearray(int	*array, size_t	old_size, size_t	new_size)
 
 void	ft_error(t_stack *stack)
 {
-	write(2, "Error\n", 6);
+	if (stack->error == 0)
+		write(2, "Error\n", 6);
 	stack->error++;
 }
 

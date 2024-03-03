@@ -81,7 +81,7 @@ int		ft_strtol(char *c, int base);
 char	*ft_get_next_line(int fd);
 char	*ft_gnlstrjoin(char *s1, char *s2);
 char	*ft_str(char *s1, char *s2, char *str);
-size_t	ft_double_strlen(char **argv, int f);
+size_t	ft_double_strlen(char **argv);
 
 //  FT_TO
 char	*ft_itoa(int n);
